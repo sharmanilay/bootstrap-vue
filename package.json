@@ -1,7 +1,7 @@
 {
-  "name": "bootstrap-vue",
-  "version": "2.17.0",
-  "description": "With more than 85 components, over 45 available plugins, several directives, and 1000+ icons, BootstrapVue provides one of the most comprehensive implementations of the Bootstrap v4 component and grid system available for Vue.js v2.6, complete with extensive and automated WAI-ARIA accessibility markup.",
+  "name": "custom-bootstrap-vue",
+  "version": "1.0.0",
+  "description": "Custom version of bootstrap-vue created for providing specific theme to a particular project",
   "main": "dist/bootstrap-vue.common.js",
   "web": "dist/bootstrap-vue.js",
   "module": "esm/index.js",
@@ -20,36 +20,8 @@
   },
   "contributors": [
     {
-      "name": "Pooya Parsa",
-      "url": "https://github.com/pi0"
-    },
-    {
-      "name": "Troy Morehouse",
-      "url": "https://github.com/tmorehouse"
-    },
-    {
-      "name": "Jacob Müller",
-      "url": "https://github.com/jackmu95"
-    },
-    {
-      "name": "Hiws",
-      "url": "https://github.com/Hiws"
-    },
-    {
-      "name": "Vitaly Mosin",
-      "url": "https://github.com/mosinve"
-    },
-    {
-      "name": "Alex Regan",
-      "url": "https://github.com/alexsasharegan"
-    },
-    {
-      "name": "SirLamer",
-      "url": "https://github.com/SirLamer"
-    },
-    {
-      "name": "vizo",
-      "url": "https://github.com/vizo"
+      "name": "Nilay Sharma",
+      "url": "https://github.com/sharmanilay"
     }
   ],
   "files": [

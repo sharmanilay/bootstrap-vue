@@ -1,0 +1,133 @@
+$font-family-sans-serif: 'Roboto', sans-serif;
+$poppins: 'Poppins', sans-serif;
+$montserrat: 'Montserrat', sans-serif;
+$lato: 'Lato', sans-serif;
+$headings-font-weight: 400;
+
+$fonts: () !default;
+
+$theme-fonts: map-merge(
+  (
+    "poppins": $poppins,
+    "montserrat": $montserrat,
+    "lato": $lato,
+  ),
+  $fonts
+);
+
+// theme settings
+$primary: #27b67c;
+$secondary: #322d59;
+$danger: #dd2c09;
+$lighter-text: #666;
+$muted-color: #A3A3A3;
+$navbar-padding-y: 20px;
+
+$link-hover-decoration: none;
+
+$table-border-color: #ccc;
+$light-background-color: #f1f1f1;
+
+$card-spacer-y: 1rem;
+$card-spacer-x: 1rem;
+$card-cap-bg: transparent;
+$card-border-width: 0;
+
+$pagination-bg: transparent;
+$pagination-disabled-bg: transparent;
+
+$dc-form-border-color: #eaebf0;
+$dc-label-color: #707070;
+$dc-input-color: #2b2b2b;
+$dc-input-disabled-color: #f6f7f8;
+$dc-input-border-color: #e0e7ff;
+
+$dc-error-bg-color: #fff6f4;
+$dc-error-border-color: #e57373;
+$dc-warning-bg-color: #fff5d7;
+
+$dc-actions-bg: #fafafa;
+$dc-svg: #8798ad;
+$dc-upload: #3560ff;
+$funding-title: #1B253A;
+
+// $input-btn-padding-y: 0.6rem;
+// $input-btn-padding-x: 2rem;
+// $input-btn-line-height: 1.2;
+
+//table
+$table-cell-padding: 0.8rem 0.5rem;
+
+// v2 stuff.
+$drip-primary: $primary;
+$drip-secondary: $secondary;
+$drip-bg: #fff;
+$drip-gray-1: #91949f;
+$drip-border-color: #eaebf0;
+$drip-card-border-color: #ececec;
+$border-radius: 5px;
+
+// input
+$drip-input-bg: $drip-bg;
+$drip-input-border-radius: 5px;
+$drip-input-border: 1px solid $drip-border-color;
+
+// card
+$drip-card-border: 1px solid $drip-card-border-color;
+$drip-card-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.05);
+
+// invoice stages
+$pending-color: #ffc400;
+$processing-color: #00aaff;
+$approved-color: #26ac75;
+$advanced-color: #de4a39;
+$paid-color: #5a527b;
+$settled-color: #a3a3a3;
+$release-limit: #f3f4f6;
+$rejected-color: #DD2C07;
+$sold-color: #5D6D7E;
+$initiated: #E67E22;
+
+$status-colors: map-merge(
+  (
+    "pending": $pending-color,
+    "processing": $processing-color,
+    "approved": $approved-color,
+    'advanced': $advanced-color,
+    'paid': $paid-color,
+    'settled': $settled-color,
+    'release': $release-limit,
+    'rejected': $rejected-color,
+    'muted': $muted-color,
+    'sold': $sold-color,
+    'initiated': $initiated
+  ),
+  ()
+);
+
+/* use classes like font-poppins or font-latto directly */
+@each $font, $value in $theme-fonts {
+  .font-#{$font} {
+    font-family: $value;
+  }
+}
+
+/* use classes like bg-status or text-status for repective boundary */
+@each $status, $value in $status-colors {
+  .bg-#{$status} {
+    background-color: $value;
+  }
+  .text-#{$status} {
+    color: $value;
+  }
+  .border-#{$status} {
+    border: 1px solid $value;
+  }
+}
+
+/* use classes like font-10(font-size: 10px) or font-15 directly */
+@for $i from 2 through 10 {
+  .font-#{$i*5} {
+    font-size: $i*5px;
+  }
+}
