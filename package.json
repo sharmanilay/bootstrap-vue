@@ -9,21 +9,16 @@
   "source": "src/index.js",
   "sass": "src/index.scss",
   "style": "dist/bootstrap-vue.css",
-  "license": "MIT",
-  "repository": "bootstrap-vue/bootstrap-vue",
-  "homepage": "https://bootstrap-vue.org",
   "types": "src/index.d.ts",
   "web-types": "dist/web-types.json",
   "vetur": {
     "tags": "dist/vetur-tags.json",
     "attributes": "dist/vetur-attributes.json"
   },
-  "contributors": [
-    {
-      "name": "Nilay Sharma",
-      "url": "https://github.com/sharmanilay"
-    }
-  ],
+  "author":{
+    "name": "Nilay Sharma",
+    "email": "nilaysharma642@gmail.com"
+  },
   "files": [
     "dist",
     "esm",
@@ -177,9 +172,9 @@
     ]
   },
   "keywords": [
-    "Bootstrap",
-    "Bootstrap v4",
-    "Bootstrap for Vue",
+    "Custom Bootstrap",
+    "Custom Bootstrap v4",
+    "Custom Bootstrap for Vue",
     "SSR",
     "Web",
     "Components",
@@ -239,10 +234,5 @@
     "vue-strap",
     "vuestrap",
     "uiv"
-  ],
-  "collective": {
-    "type": "opencollective",
-    "url": "https://opencollective.com/bootstrap-vue",
-    "logo": "https://opencollective.com/bootstrap-vue/logo.txt"
-  }
+  ]
 }
