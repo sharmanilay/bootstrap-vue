@@ -1,5 +1,5 @@
 {
-  "name": "@bootstrap-vue/layout",
+  "name": "@custom-bootstrap-vue/layout",
   "version": "1.0.0",
   "meta": {
     "title": "Layout and Grid System",

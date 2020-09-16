@@ -120,10 +120,7 @@ of Vue.js, BootstrapVue and Bootstrap v4:
 
 ```bash
 # With npm
-npm install vue bootstrap-vue bootstrap
-
-# With yarn
-yarn add vue bootstrap-vue bootstrap
+npm install vue custom-bootstrap-vue bootstrap
 ```
 
 Then, register BootstrapVue in your app entry point:
@@ -131,7 +128,7 @@ Then, register BootstrapVue in your app entry point:
 ```js
 // app.js
 import Vue from 'vue'
-import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
+import { BootstrapVue, IconsPlugin } from 'custom-bootstrap-vue'
 
 // Install BootstrapVue
 Vue.use(BootstrapVue)
@@ -144,7 +141,7 @@ And import Bootstrap and BootstrapVue `css` files:
 ```js
 // app.js
 import 'bootstrap/dist/css/bootstrap.css'
-import 'bootstrap-vue/dist/bootstrap-vue.css'
+import 'custom-bootstrap-vue/dist/bootstrap-vue.css'
 ```
 
 **Alternatively** you can import Bootstrap and BootstrapVue `scss` files in a custom SCSS file:
@@ -152,7 +149,7 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 ```scss
 // custom.scss
 @import 'node_modules/bootstrap/scss/bootstrap';
-@import 'node_modules/bootstrap-vue/src/index.scss';
+@import 'node_modules/custom-bootstrap-vue/src/index.scss';
 ```
 
 Make sure to import the `custom.scss` file in your app entry point:
@@ -176,13 +173,13 @@ a `scss` file:
 ```scss
 // Webpack example
 @import '~bootstrap';
-@import '~bootstrap-vue';
+@import '~custom-bootstrap-vue';
 ```
 
 ```scss
 // Parcel example
 @import '~bootstrap/scss/bootstrap';
-@import '~bootstrap-vue/src/index.scss';
+@import '~custom-bootstrap-vue/src/index.scss';
 ```
 
 For more details how to configure asset loading and how modules are resolved, please consult the
@@ -254,29 +251,30 @@ CSS/SCSS.
 
 ### Component groups and directives as Vue plugins
 
-You can import component groups and directives as Vue plugins by importing from the `bootstrap-vue`:
+You can import component groups and directives as Vue plugins by importing from the
+`custom-bootstrap-vue`:
 
 <!-- eslint-disable import/first, import/no-duplicates -->
 
 ```js
 // This imports all the layout components such as <b-container>, <b-row>, <b-col>:
-import { LayoutPlugin } from 'bootstrap-vue'
+import { LayoutPlugin } from 'custom-bootstrap-vue'
 Vue.use(LayoutPlugin)
 
 // This imports <b-modal> as well as the v-b-modal directive as a plugin:
-import { ModalPlugin } from 'bootstrap-vue'
+import { ModalPlugin } from 'custom-bootstrap-vue'
 Vue.use(ModalPlugin)
 
 // This imports <b-card> along with all the <b-card-*> sub-components as a plugin:
-import { CardPlugin } from 'bootstrap-vue'
+import { CardPlugin } from 'custom-bootstrap-vue'
 Vue.use(CardPlugin)
 
 // This imports directive v-b-scrollspy as a plugin:
-import { VBScrollspyPlugin } from 'bootstrap-vue'
+import { VBScrollspyPlugin } from 'custom-bootstrap-vue'
 Vue.use(VBScrollspyPlugin)
 
 // This imports the dropdown and table plugins
-import { DropdownPlugin, TablePlugin } from 'bootstrap-vue'
+import { DropdownPlugin, TablePlugin } from 'custom-bootstrap-vue'
 Vue.use(DropdownPlugin)
 Vue.use(TablePlugin)
 ```
@@ -288,7 +286,7 @@ component and directive documentation for details.
 
 There are two additional helper plugins for providing the `$bvModal` and `$bvToast` injections (if
 you are not using the `ModalPlugin` or `ToastPlugin` plugins) which are available for import from
-`'bootstrap-vue'`:
+`'custom-bootstrap-vue'`:
 
 - `BVModalPlugin` - provides the injection `$bvModal` for generating
   [message boxes](/docs/components/modal#modal-message-boxes).
@@ -310,7 +308,7 @@ To cherry pick a component/directive, start by importing it in the file where it
 ```js
 // Place all imports from 'bootstrap-vue' in a single import
 // statement for optimal bundle sizes
-import { BModal, VBModal } from 'bootstrap-vue'
+import { BModal, VBModal } from 'custom-bootstrap-vue'
 ```
 
 Then add it to your component definition:
@@ -350,11 +348,11 @@ When using module bundlers, they will usually default to using the `esm/` modula
 been pre-transpiled by Babel for our
 [supported browsers](https://github.com/bootstrap-vue/bootstrap-vue/blob/master/.browserslistrc).
 
-You can override the use of the `esm/` build by aliasing `'bootstrap-vue'` to use the BootstrapVue
-source files, and whitelisting `node_modules/bootstrap-vue/src/*` for transpilation by your build
-process, in your module bundler config. This will allow you to transpile BootstrapVue for your
-target browsers/environments and potentially reduce bundle sizes (and will only include the babel
-helper utils once) at the expense of slightly longer build times.
+You can override the use of the `esm/` build by aliasing `'custom-bootstrap-vue'` to use the
+BootstrapVue source files, and whitelisting `node_modules/custom-bootstrap-vue/src/*` for
+transpilation by your build process, in your module bundler config. This will allow you to transpile
+BootstrapVue for your target browsers/environments and potentially reduce bundle sizes (and will
+only include the babel helper utils once) at the expense of slightly longer build times.
 
 **Example webpack.config.js for Babel transpilation:**
 
@@ -363,7 +361,7 @@ module.exports = {
   resolve: {
     alias: {
       // Alias for using source of BootstrapVue
-      'bootstrap-vue$': 'bootstrap-vue/src/index.js'
+      'bootstrap-vue$': 'custom-bootstrap-vue/src/index.js'
     }
   },
   module: {
@@ -371,7 +369,7 @@ module.exports = {
       {
         test: /\.js$/,
         // Exclude transpiling `node_modules`, except `bootstrap-vue/src`
-        exclude: /node_modules\/(?!bootstrap-vue\/src\/)/,
+        exclude: /node_modules\/(?!custom-bootstrap-vue\/src\/)/,
         use: {
           loader: 'babel-loader',
           options: {
@@ -414,19 +412,16 @@ Install dependencies:
 
 ```bash
 # With npm
-npm install bootstrap-vue
-
-# With yarn
-yarn add bootstrap-vue
+npm install custom-bootstrap-vue
 ```
 
-Add `bootstrap-vue/nuxt` to modules section of your **`nuxt.config.js`** file.
+Add `custom-bootstrap-vue/nuxt` to modules section of your **`nuxt.config.js`** file.
 
 This will include both `bootstrap.css` and `bootstrap-vue.css` default pre-compiled CSS.
 
 ```js
 module.exports = {
-  modules: ['bootstrap-vue/nuxt']
+  modules: ['custom-bootstrap-vue/nuxt']
 }
 ```
 
@@ -440,7 +435,7 @@ BootstrapVue pre-compiled CSS files by setting the following option(s) to `false
 
 ```js
 module.exports = {
-  modules: ['bootstrap-vue/nuxt'],
+  modules: ['custom-bootstrap-vue/nuxt'],
   bootstrapVue: {
     bootstrapCSS: false, // Or `css: false`
     bootstrapVueCSS: false // Or `bvCSS: false`
@@ -467,7 +462,7 @@ $enable-rounded: false;
 
 // Then include the following
 @import 'bootstrap/scss/bootstrap.scss';
-@import 'bootstrap-vue/src/index.scss';
+@import 'custom-bootstrap-vue/src/index.scss';
 
 // And define any of your custom or additional CSS/SCSS here,
 // or via an @import
@@ -494,7 +489,7 @@ applies to the JavaScript code and not CSS/SCSS.
 
 ```js
 module.exports = {
-  modules: ['bootstrap-vue/nuxt'],
+  modules: ['custom-bootstrap-vue/nuxt'],
   bootstrapVue: {
     componentPlugins: [
       'LayoutPlugin',
@@ -524,7 +519,7 @@ BootstrapVue `components` or `directives` you want to globally install in your N
 
 ```js
 module.exports = {
-  modules: ['bootstrap-vue/nuxt'],
+  modules: ['custom-bootstrap-vue/nuxt'],
   bootstrapVue: {
     components: ['BContainer', 'BRow', 'BCol', 'BFormInput', 'BButton', 'BTable', 'BModal'],
     directives: ['VBModal', 'VBPopover', 'VBTooltip', 'VBScrollspy']

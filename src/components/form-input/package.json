@@ -1,5 +1,5 @@
 {
-  "name": "@bootstrap-vue/form-input",
+  "name": "@custom-bootstrap-vue/form-input",
   "version": "1.1.0",
   "meta": {
     "title": "Form Input",

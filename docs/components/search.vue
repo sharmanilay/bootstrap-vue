@@ -71,7 +71,7 @@ export default {
       // Initialize docsearch
       this.docsearch = window.docsearch({
         apiKey: 'c816d3054b015320f0cfb40042f7e2bc',
-        indexName: 'bootstrap-vue',
+        indexName: 'custom-bootstrap-vue',
         inputSelector: '#bd-search-input',
         transformData(hits) {
           return hits.map(function(hit) {

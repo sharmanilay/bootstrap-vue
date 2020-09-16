@@ -1,5 +1,5 @@
 {
-  "name": "@bootstrap-vue/form-datepicker",
+  "name": "@custom-bootstrap-vue/form-datepicker",
   "version": "1.0.0",
   "meta": {
     "title": "Form Datepicker",

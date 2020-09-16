@@ -126,7 +126,7 @@ import hljs from '../utils/hljs'
 import { kebabCase } from '../utils'
 import AnchoredHeading from './anchored-heading'
 
-const importPath = 'bootstrap-vue'
+const importPath = 'custom-bootstrap-vue'
 
 export default {
   name: 'BVImportdoc',
@@ -136,7 +136,7 @@ export default {
   },
   computed: {
     importPath() {
-      return 'bootstrap-vue'
+      return 'custom-bootstrap-vue'
     },
     isComponentRoute() {
       const name = this.$route.name
@@ -209,7 +209,7 @@ export default {
     },
     pluginImportCode() {
       return [
-        `import { ${this.pluginName} } from 'bootstrap-vue'`,
+        `import { ${this.pluginName} } from 'custom-bootstrap-vue'`,
         `Vue.use(${this.pluginName})`
       ].join('\n')
     }

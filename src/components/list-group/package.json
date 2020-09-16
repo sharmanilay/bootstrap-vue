@@ -1,5 +1,5 @@
 {
-  "name": "@bootstrap-vue/list-group",
+  "name": "@custom-bootstrap-vue/list-group",
   "version": "1.0.0",
   "meta": {
     "title": "List group",

@@ -1,5 +1,5 @@
 {
-  "name": "@bootstrap-vue/tooltip",
+  "name": "@custom-bootstrap-vue/tooltip",
   "version": "0.0.0",
   "meta": {
     "title": "Tooltip",

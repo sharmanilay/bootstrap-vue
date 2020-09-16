@@ -1,21 +1,21 @@
 {
   "name": "custom-bootstrap-vue",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Custom version of bootstrap-vue created for providing specific theme to a particular project",
-  "main": "dist/bootstrap-vue.common.js",
-  "web": "dist/bootstrap-vue.js",
+  "main": "dist/custom-bootstrap-vue.common.js",
+  "web": "dist/custom-bootstrap-vue.js",
   "module": "esm/index.js",
   "jsnext:main": "esm/index.js",
   "source": "src/index.js",
   "sass": "src/index.scss",
-  "style": "dist/bootstrap-vue.css",
+  "style": "dist/custom-bootstrap-vue.css",
   "types": "src/index.d.ts",
   "web-types": "dist/web-types.json",
   "vetur": {
     "tags": "dist/vetur-tags.json",
     "attributes": "dist/vetur-attributes.json"
   },
-  "author":{
+  "author": {
     "name": "Nilay Sharma",
     "email": "nilaysharma642@gmail.com"
   },

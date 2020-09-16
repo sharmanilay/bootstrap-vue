@@ -1,5 +1,5 @@
 {
-  "name": "@bootstrap-vue/alert",
+  "name": "@custom-bootstrap-vue/alert",
   "version": "1.0.0",
   "meta": {
     "title": "Alert",
