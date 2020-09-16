@@ -5,10 +5,10 @@ const banner = `/*!
  * BootstrapVue ${pkg.version}
  *
  * @link ${pkg.homepage}
- * @source https://github.com/bootstrap-vue/bootstrap-vue
+ * @source https://github.com/custom-bootstrap-vue/custom-bootstrap-vue
  * @copyright (c) 2016-${year} BootstrapVue
  * @license ${pkg.license}
- * https://github.com/bootstrap-vue/bootstrap-vue/blob/master/LICENSE
+ * https://github.com/custom-bootstrap-vue/custom-bootstrap-vue/blob/master/LICENSE
  */
 `
 

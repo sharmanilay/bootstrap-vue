@@ -23,10 +23,10 @@ const RX_CODE_FILENAME = /^\/\/ ([\w,\s-]+\.[A-Za-z]{1,4})\n/m
 const ANCHOR_LINK_HEADING_LEVELS = [2, 3, 4, 5]
 
 // Determine if documentation generation is published production docs
-// Must be from 'bootstrap-vue/bootstrap-vue' repo 'master' branch
+// Must be from 'custom-bootstrap-vue/custom-bootstrap-vue' repo 'master' branch
 const IS_PROD_DOCS =
-  process.env.VERCEL_GITHUB_ORG === 'bootstrap-vue' &&
-  process.env.VERCEL_GITHUB_REPO === 'bootstrap-vue' &&
+  process.env.VERCEL_GITHUB_ORG === 'custom-bootstrap-vue' &&
+  process.env.VERCEL_GITHUB_REPO === 'custom-bootstrap-vue' &&
   process.env.VERCEL_GITHUB_COMMIT_REF === 'master'
 
 // --- Utility methods ---
@@ -277,7 +277,7 @@ module.exports = {
     ]
   },
 
-  plugins: ['~/plugins/bootstrap-vue.js', '~/plugins/play.js', '~/plugins/docs.js'],
+  plugins: ['~/plugins/custom-bootstrap-vue.js', '~/plugins/play.js', '~/plugins/docs.js'],
 
   buildModules: ['@nuxtjs/google-analytics'],
   modules: ['@nuxt/content', '@nuxtjs/pwa', '@nuxtjs/robots', '@nuxtjs/sitemap'],

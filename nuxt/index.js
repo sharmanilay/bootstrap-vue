@@ -92,7 +92,7 @@ module.exports = function nuxtBootstrapVue(moduleOptions = {}) {
     const usePretranspiled = pickFirst(options.usePretranspiled, this.options.dev, false)
     if (!usePretranspiled) {
       // Use bootstrap-vue source code for smaller prod builds
-      // by aliasing 'bootstrap-vue' to the source files
+      // by aliasing 'custom-bootstrap-vue' to the source files
       this.extendBuild(config => {
         if (!config.resolve.alias) {
           config.resolve.alias = {}
@@ -100,7 +100,7 @@ module.exports = function nuxtBootstrapVue(moduleOptions = {}) {
         const index = require.resolve(srcIndex)
         const srcDir = index.replace(/index\.js$/, '')
         // We prepend a $ to ensure that it is only used for
-        // `import from 'bootstrap-vue'` not `import from 'bootstrap-vue/*'`
+        // `import from 'custom-bootstrap-vue'` not `import from 'custom-bootstrap-vue/*'`
         config.resolve.alias['custom-bootstrap-vue$'] = index
         // If users are still cherry-picking modules from esm/ or es/ (legacy),
         // alias them to src/ to prevent duplicate code imports

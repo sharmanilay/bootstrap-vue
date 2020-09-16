@@ -16,7 +16,7 @@ export default {
     },
     placement: {
       type: String,
-      default: 'bootstrap-vuejsorg'
+      default: 'custom-bootstrap-vuejsorg'
     }
   },
   data() {
