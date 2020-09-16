@@ -34,7 +34,7 @@ props instead of `sm`, `md`, `lg` and `xl` props (Similar for the `label-cols-{b
 `label-align-{breakpoint}`props on `<b-form-group>`):
 
 ```js
-import BootstrapVue from 'custom-bootstrap-vue'
+import BootstrapVue from 'bootstrap-vue'
 Vue.use(BootstrapVue, {
   breakpoints: [`xs`, 'sm', 'md', 'lg', 'xl', 'xxl']
 })
@@ -43,7 +43,7 @@ Vue.use(BootstrapVue, {
 Or if changing the default variants for `<b-button>` and `<b-alert>`:
 
 ```js
-import BootstrapVue from 'custom-bootstrap-vue'
+import BootstrapVue from 'bootstrap-vue'
 Vue.use(BootstrapVue, {
   BAlert: { variant: 'danger' },
   BButton: { variant: 'primary' }
@@ -73,7 +73,7 @@ and subsequent changes to the breakpoints will **not** be reflected.
 
 ```js
 // Component group plugins
-import { LayoutPlugin, AlertPlugin, ButtonPlugin } from 'custom-bootstrap-vue'
+import { LayoutPlugin, AlertPlugin, ButtonPlugin } from 'bootstrap-vue'
 
 // Supply configs via each plugin as it is `Vue.use()`'d
 Vue.use(LayoutPlugin, { breakpoints: ['xs', 'sm', 'lg', 'xl', 'xxl'] })
@@ -87,7 +87,7 @@ Vue.use(ButtonPlugin, { BButton: { variant: 'primary' } })
 
 ```js
 // Component group plugins
-import { LayoutPlugin, AlertPlugin, ButtonPlugin } from 'custom-bootstrap-vue'
+import { LayoutPlugin, AlertPlugin, ButtonPlugin } from 'bootstrap-vue'
 
 // Supply complete config to first `Vue.use()`'d plugin
 Vue.use(LayoutPlugin, {
@@ -105,7 +105,7 @@ Vue.use(ButtonPlugin)
 
 ```js
 // BootstrapVue configuration helper plugin and Component group plugins
-import { BVConfigPlugin, LayoutPlugin, AlertPlugin, ButtonPlugin } from 'custom-bootstrap-vue'
+import { BVConfigPlugin, LayoutPlugin, AlertPlugin, ButtonPlugin } from 'bootstrap-vue'
 
 // Supply complete config to the BVConfigPlugin helper plugin
 Vue.use(BVConfigPlugin, {
@@ -126,7 +126,7 @@ Vue.use(ButtonPlugin)
 
 ```js
 // Import BootstrapVue configuration helper plugin and Individual components
-import { BVConfigPlugin, BAlert, BButton, BRow, BCol } from 'custom-bootstrap-vue'
+import { BVConfigPlugin, BAlert, BButton, BRow, BCol } from 'bootstrap-vue'
 
 // Supply complete config to the BVConfig helper plugin
 Vue.use(BVConfigPlugin, {

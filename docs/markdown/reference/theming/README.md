@@ -5,9 +5,9 @@
 
 While BootstrapVue uses Bootstrap's CSS, certain features of BootstrapVue uses custom CSS (i.e.
 stacked tables, etc.). Our custom CSS relies on variables defined the Bootstrap v4.x SCSS. The
-`bootstrap-vue/dist/custom-bootstrap-vue.css` is compiled using the default Bootstrap v4.x
-variables. By using the BootstrapVue source SCSS, you can have your variable overrides (such as
-breakpoints, theme colors, etc.) adjust the custom BootstrapVue css generation.
+`bootstrap-vue/dist/bootstrap-vue.css` is compiled using the default Bootstrap v4.x variables. By
+using the BootstrapVue source SCSS, you can have your variable overrides (such as breakpoints, theme
+colors, etc.) adjust the custom BootstrapVue css generation.
 
 For premium dashboards and themes, please refer to the [`Themes section`](/themes) of the
 documentation.
@@ -39,7 +39,7 @@ $body-color: #111;
 // Bootstrap and its default variables
 @import '../node_modules/bootstrap/scss/bootstrap';
 // BootstrapVue and its default variables
-@import '../node_modules/custom-bootstrap-vue/src/index.scss';
+@import '../node_modules/bootstrap-vue/src/index.scss';
 ```
 
 ## Default theme colors
@@ -115,7 +115,7 @@ generation to reduce the size of BootstrapVue's custom CSS bundle:
 | `$bv-enable-popover-variants` | Boolean | `true`  | Enables popover variant CSS generation                |
 
 You can find additional variables that control various aspects of BootstrapVue's custom CSS at
-[`bootstrap-vue/src/_variables.scss`](https://github.com/custom-bootstrap-vue/custom-bootstrap-vue/blob/master/src/_variables.scss).
+[`bootstrap-vue/src/_variables.scss`](https://github.com/bootstrap-vue/bootstrap-vue/blob/master/src/_variables.scss).
 Note that BootstrapVue's custom SCSS relies on Bootstrap's SASS variables, functions, and mixins.
 
 ## Generating custom themes

@@ -518,8 +518,7 @@ export default {
         // Example component (most likely an auto generated component)
         return ''
       }
-      const base =
-        'https://github.com/custom-bootstrap-vue/custom-bootstrap-vue/tree/dev/src/components'
+      const base = 'https://github.com/bootstrap-vue/bootstrap-vue/tree/dev/src/components'
       const slug = this.$route.params.slug
       // Always point to the `.js` file (which may import a `.vue` file)
       return `${base}/${slug}/${name}.js`

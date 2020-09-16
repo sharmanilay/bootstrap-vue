@@ -2,12 +2,12 @@ import Vue from 'vue';
 
 <% if (!options.treeShake) { %>
 <%   if (options.icons) { %>
-import { BootstrapVue, BootstrapVueIcons } from 'custom-bootstrap-vue';
+import { BootstrapVue, BootstrapVueIcons } from 'bootstrap-vue';
 
 Vue.use(BootstrapVue, <%= JSON.stringify(options.config || {}, undefined, 2) %>);
 Vue.use(BootstrapVueIcons);
 <%   } else { %>
-import { BootstrapVue } from 'custom-bootstrap-vue';
+import { BootstrapVue } from 'bootstrap-vue';
 
 Vue.use(BootstrapVue, <%= JSON.stringify(options.config || {}, undefined, 2) %>);
 <%   } %>
@@ -22,7 +22,7 @@ import {
     options.components,
     options.directives
   ).filter(Boolean).join(',\n  ') %>
-} from 'custom-bootstrap-vue';
+} from 'bootstrap-vue';
 
 <%   if (options.config) { %>
 Vue.use(BVConfigPlugin, <%= JSON.stringify(options.config, undefined, 2) %>);

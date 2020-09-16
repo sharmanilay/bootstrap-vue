@@ -177,8 +177,8 @@ export default {
           // is out of sync, make sure to change it to the given one
           // Usually caused by browser autocomplete and how it triggers the
           // change or input event, or depending on the formatter function
-          // https://github.com/custom-bootstrap-vue/custom-bootstrap-vue/issues/2657
-          // https://github.com/custom-bootstrap-vue/custom-bootstrap-vue/issues/3498
+          // https://github.com/bootstrap-vue/bootstrap-vue/issues/2657
+          // https://github.com/bootstrap-vue/bootstrap-vue/issues/3498
           /* istanbul ignore next: hard to test */
           const $input = this.$refs.input
           /* istanbul ignore if: hard to test out of sync value */

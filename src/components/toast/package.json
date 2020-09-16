@@ -1,5 +1,5 @@
 {
-  "name": "@custom-bootstrap-vue/toast",
+  "name": "@bootstrap-vue/toast",
   "version": "1.0.0",
   "meta": {
     "title": "Toasts",

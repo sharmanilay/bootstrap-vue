@@ -208,7 +208,7 @@ export default {
         'custom-control-input': this.isCustom,
         'is-valid': this.getState === true && !this.isBtnMode,
         'is-invalid': this.getState === false && !this.isBtnMode,
-        // https://github.com/custom-bootstrap-vue/custom-bootstrap-vue/issues/2911
+        // https://github.com/bootstrap-vue/bootstrap-vue/issues/2911
         'position-static': this.isPlain && !defaultSlot
       },
       directives: [
@@ -239,7 +239,7 @@ export default {
       // Not button mode
       let label = h()
       // If no label content in plain mode we dont render the label
-      // https://github.com/custom-bootstrap-vue/custom-bootstrap-vue/issues/2911
+      // https://github.com/bootstrap-vue/bootstrap-vue/issues/2911
       if (!(this.isPlain && !defaultSlot)) {
         label = h(
           'label',

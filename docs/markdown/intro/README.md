@@ -120,7 +120,7 @@ of Vue.js, BootstrapVue and Bootstrap v4:
 
 ```bash
 # With npm
-npm install vue custom-bootstrap-vue bootstrap
+npm install vue bootstrap-vue bootstrap
 ```
 
 Then, register BootstrapVue in your app entry point:
@@ -128,7 +128,7 @@ Then, register BootstrapVue in your app entry point:
 ```js
 // app.js
 import Vue from 'vue'
-import { BootstrapVue, IconsPlugin } from 'custom-bootstrap-vue'
+import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 
 // Install BootstrapVue
 Vue.use(BootstrapVue)
@@ -141,7 +141,7 @@ And import Bootstrap and BootstrapVue `css` files:
 ```js
 // app.js
 import 'bootstrap/dist/css/bootstrap.css'
-import 'custom-bootstrap-vue/dist/custom-bootstrap-vue.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
 ```
 
 **Alternatively** you can import Bootstrap and BootstrapVue `scss` files in a custom SCSS file:
@@ -149,7 +149,7 @@ import 'custom-bootstrap-vue/dist/custom-bootstrap-vue.css'
 ```scss
 // custom.scss
 @import 'node_modules/bootstrap/scss/bootstrap';
-@import 'node_modules/custom-bootstrap-vue/src/index.scss';
+@import 'node_modules/bootstrap-vue/src/index.scss';
 ```
 
 Make sure to import the `custom.scss` file in your app entry point:
@@ -173,13 +173,13 @@ a `scss` file:
 ```scss
 // Webpack example
 @import '~bootstrap';
-@import '~custom-bootstrap-vue';
+@import '~bootstrap-vue';
 ```
 
 ```scss
 // Parcel example
 @import '~bootstrap/scss/bootstrap';
-@import '~custom-bootstrap-vue/src/index.scss';
+@import '~bootstrap-vue/src/index.scss';
 ```
 
 For more details how to configure asset loading and how modules are resolved, please consult the
@@ -251,30 +251,29 @@ CSS/SCSS.
 
 ### Component groups and directives as Vue plugins
 
-You can import component groups and directives as Vue plugins by importing from the
-`custom-bootstrap-vue`:
+You can import component groups and directives as Vue plugins by importing from the `bootstrap-vue`:
 
 <!-- eslint-disable import/first, import/no-duplicates -->
 
 ```js
 // This imports all the layout components such as <b-container>, <b-row>, <b-col>:
-import { LayoutPlugin } from 'custom-bootstrap-vue'
+import { LayoutPlugin } from 'bootstrap-vue'
 Vue.use(LayoutPlugin)
 
 // This imports <b-modal> as well as the v-b-modal directive as a plugin:
-import { ModalPlugin } from 'custom-bootstrap-vue'
+import { ModalPlugin } from 'bootstrap-vue'
 Vue.use(ModalPlugin)
 
 // This imports <b-card> along with all the <b-card-*> sub-components as a plugin:
-import { CardPlugin } from 'custom-bootstrap-vue'
+import { CardPlugin } from 'bootstrap-vue'
 Vue.use(CardPlugin)
 
 // This imports directive v-b-scrollspy as a plugin:
-import { VBScrollspyPlugin } from 'custom-bootstrap-vue'
+import { VBScrollspyPlugin } from 'bootstrap-vue'
 Vue.use(VBScrollspyPlugin)
 
 // This imports the dropdown and table plugins
-import { DropdownPlugin, TablePlugin } from 'custom-bootstrap-vue'
+import { DropdownPlugin, TablePlugin } from 'bootstrap-vue'
 Vue.use(DropdownPlugin)
 Vue.use(TablePlugin)
 ```
@@ -286,7 +285,7 @@ component and directive documentation for details.
 
 There are two additional helper plugins for providing the `$bvModal` and `$bvToast` injections (if
 you are not using the `ModalPlugin` or `ToastPlugin` plugins) which are available for import from
-`'custom-bootstrap-vue'`:
+`'bootstrap-vue'`:
 
 - `BVModalPlugin` - provides the injection `$bvModal` for generating
   [message boxes](/docs/components/modal#modal-message-boxes).
@@ -306,9 +305,9 @@ To cherry pick a component/directive, start by importing it in the file where it
 <!-- eslint-disable no-unused-vars -->
 
 ```js
-// Place all imports from 'custom-bootstrap-vue' in a single import
+// Place all imports from 'bootstrap-vue' in a single import
 // statement for optimal bundle sizes
-import { BModal, VBModal } from 'custom-bootstrap-vue'
+import { BModal, VBModal } from 'bootstrap-vue'
 ```
 
 Then add it to your component definition:
@@ -346,13 +345,13 @@ object property shorthand (components only).
 
 When using module bundlers, they will usually default to using the `esm/` modular build, which has
 been pre-transpiled by Babel for our
-[supported browsers](https://github.com/custom-bootstrap-vue/custom-bootstrap-vue/blob/master/.browserslistrc).
+[supported browsers](https://github.com/bootstrap-vue/bootstrap-vue/blob/master/.browserslistrc).
 
-You can override the use of the `esm/` build by aliasing `'custom-bootstrap-vue'` to use the
-BootstrapVue source files, and whitelisting `node_modules/custom-bootstrap-vue/src/*` for
-transpilation by your build process, in your module bundler config. This will allow you to transpile
-BootstrapVue for your target browsers/environments and potentially reduce bundle sizes (and will
-only include the babel helper utils once) at the expense of slightly longer build times.
+You can override the use of the `esm/` build by aliasing `'bootstrap-vue'` to use the BootstrapVue
+source files, and whitelisting `node_modules/bootstrap-vue/src/*` for transpilation by your build
+process, in your module bundler config. This will allow you to transpile BootstrapVue for your
+target browsers/environments and potentially reduce bundle sizes (and will only include the babel
+helper utils once) at the expense of slightly longer build times.
 
 **Example webpack.config.js for Babel transpilation:**
 
@@ -361,7 +360,7 @@ module.exports = {
   resolve: {
     alias: {
       // Alias for using source of BootstrapVue
-      'custom-bootstrap-vue$': 'custom-bootstrap-vue/src/index.js'
+      'bootstrap-vue$': 'bootstrap-vue/src/index.js'
     }
   },
   module: {
@@ -369,7 +368,7 @@ module.exports = {
       {
         test: /\.js$/,
         // Exclude transpiling `node_modules`, except `bootstrap-vue/src`
-        exclude: /node_modules\/(?!custom-bootstrap-vue\/src\/)/,
+        exclude: /node_modules\/(?!bootstrap-vue\/src\/)/,
         use: {
           loader: 'babel-loader',
           options: {
@@ -412,16 +411,16 @@ Install dependencies:
 
 ```bash
 # With npm
-npm install custom-bootstrap-vue
+npm install bootstrap-vue
 ```
 
-Add `custom-bootstrap-vue/nuxt` to modules section of your **`nuxt.config.js`** file.
+Add `bootstrap-vue/nuxt` to modules section of your **`nuxt.config.js`** file.
 
 This will include both `bootstrap.css` and `bootstrap-vue.css` default pre-compiled CSS.
 
 ```js
 module.exports = {
-  modules: ['custom-bootstrap-vue/nuxt']
+  modules: ['bootstrap-vue/nuxt']
 }
 ```
 
@@ -435,7 +434,7 @@ BootstrapVue pre-compiled CSS files by setting the following option(s) to `false
 
 ```js
 module.exports = {
-  modules: ['custom-bootstrap-vue/nuxt'],
+  modules: ['bootstrap-vue/nuxt'],
   bootstrapVue: {
     bootstrapCSS: false, // Or `css: false`
     bootstrapVueCSS: false // Or `bvCSS: false`
@@ -462,7 +461,7 @@ $enable-rounded: false;
 
 // Then include the following
 @import 'bootstrap/scss/bootstrap.scss';
-@import 'custom-bootstrap-vue/src/index.scss';
+@import 'bootstrap-vue/src/index.scss';
 
 // And define any of your custom or additional CSS/SCSS here,
 // or via an @import
@@ -489,7 +488,7 @@ applies to the JavaScript code and not CSS/SCSS.
 
 ```js
 module.exports = {
-  modules: ['custom-bootstrap-vue/nuxt'],
+  modules: ['bootstrap-vue/nuxt'],
   bootstrapVue: {
     componentPlugins: [
       'LayoutPlugin',
@@ -519,7 +518,7 @@ BootstrapVue `components` or `directives` you want to globally install in your N
 
 ```js
 module.exports = {
-  modules: ['custom-bootstrap-vue/nuxt'],
+  modules: ['bootstrap-vue/nuxt'],
   bootstrapVue: {
     components: ['BContainer', 'BRow', 'BCol', 'BFormInput', 'BButton', 'BTable', 'BModal'],
     directives: ['VBModal', 'VBPopover', 'VBTooltip', 'VBScrollspy']
@@ -560,7 +559,7 @@ All Icons:
 
 ```js
 module.exports = {
-  modules: ['custom-bootstrap-vue/nuxt'],
+  modules: ['bootstrap-vue/nuxt'],
   bootstrapVue: {
     icons: true // Install the IconsPlugin (in addition to BootStrapVue plugin
   }
@@ -571,7 +570,7 @@ Specific icons:
 
 ```js
 module.exports = {
-  modules: ['custom-bootstrap-vue/nuxt'],
+  modules: ['bootstrap-vue/nuxt'],
   bootstrapVue: {
     // Add the desired icon components to the `components` array
     components: ['BIcon', 'BIconAlertFill', 'BIconCalendar', 'BIconGears']
@@ -583,7 +582,7 @@ Icons plugin:
 
 ```js
 module.exports = {
-  modules: ['custom-bootstrap-vue/nuxt'],
+  modules: ['bootstrap-vue/nuxt'],
   bootstrapVue: {
     // Add the icon plugin to the `componentsPlugins` array
     componentPlugins: ['IconsPlugin']
@@ -599,7 +598,7 @@ do so by setting the `config` property in your `nuxt.config.js`:
 
 ```js
 module.exports = {
-  modules: ['custom-bootstrap-vue/nuxt'],
+  modules: ['bootstrap-vue/nuxt'],
   bootstrapVue: {
     config: {
       // Custom config options here
@@ -639,10 +638,10 @@ instructions.
 
 ```js
 import Vue from 'vue'
-import { BootstrapVue, BootstrapVueIcons } from 'custom-bootstrap-vue'
+import { BootstrapVue, BootstrapVueIcons } from 'bootstrap-vue'
 
 import 'bootstrap/dist/css/bootstrap.css'
-import 'custom-bootstrap-vue/dist/custom-bootstrap-vue.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
 
 Vue.use(BootstrapVue)
 Vue.use(BootstrapVueIcons)
@@ -684,17 +683,17 @@ JavaScript files.
 
 <!-- Load required Bootstrap and BootstrapVue CSS -->
 <link type="text/css" rel="stylesheet" href="//unpkg.com/bootstrap/dist/css/bootstrap.min.css" />
-<link type="text/css" rel="stylesheet" href="//unpkg.com/custom-bootstrap-vue@latest/dist/custom-bootstrap-vue.min.css" />
+<link type="text/css" rel="stylesheet" href="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.css" />
 
 <!-- Load polyfills to support older browsers -->
 <script src="//polyfill.io/v3/polyfill.min.js?features=es2015%2CIntersectionObserver" crossorigin="anonymous"></script>
 
 <!-- Load Vue followed by BootstrapVue -->
 <script src="//unpkg.com/vue@latest/dist/vue.min.js"></script>
-<script src="//unpkg.com/custom-bootstrap-vue@latest/dist/custom-bootstrap-vue.min.js"></script>
+<script src="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.js"></script>
 
 <!-- Load the following for BootstrapVueIcons support -->
-<script src="//unpkg.com/custom-bootstrap-vue@latest/dist/custom-bootstrap-vue-icons.min.js"></script>
+<script src="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue-icons.min.js"></script>
 ```
 
 ## Build variants
@@ -702,12 +701,12 @@ JavaScript files.
 Choosing the best variant for your build environment / packager helps reduce bundle sizes. If your
 bundler supports esm modules, it will automatically prefer it over commonjs.
 
-| Variant        | Environments           | Tree Shake | Package path                                                                         |
-| -------------- | ---------------------- | ---------- | ------------------------------------------------------------------------------------ |
-| **ESM module** | webpack 2+ / rollup.js | Yes        | `esm/index.js`                                                                       |
-| ESM bundle     | webpack 2+ / rollup.js | Yes        | `dist/custom-bootstrap-vue.esm.js`                                                   |
-| commonjs2      | webpack 1 / ...        | No         | `dist/custom-bootstrap-vue.common.js` _or_ `dist/custom-bootstrap-vue.common.min.js` |
-| UMD            | Browser                | No         | `dist/custom-bootstrap-vue.js` _or_ `dist/custom-bootstrap-vue.min.js`               |
+| Variant        | Environments           | Tree Shake | Package path                                                           |
+| -------------- | ---------------------- | ---------- | ---------------------------------------------------------------------- |
+| **ESM module** | webpack 2+ / rollup.js | Yes        | `esm/index.js`                                                         |
+| ESM bundle     | webpack 2+ / rollup.js | Yes        | `dist/bootstrap-vue.esm.js`                                            |
+| commonjs2      | webpack 1 / ...        | No         | `dist/bootstrap-vue.common.js` _or_ `dist/bootstrap-vue.common.min.js` |
+| UMD            | Browser                | No         | `dist/bootstrap-vue.js` _or_ `dist/bootstrap-vue.min.js`               |
 
 Note the UMD (browser) variant **does not** include BootstrapVue [icons](/docs/icons) support. All
 other variants listed above _do include_ the `BootstrapVueIcons` (`IconsPlugin`) plugin (note the
@@ -716,22 +715,22 @@ icons plugin is not automatically installed, and must explicitly installed via `
 
 Icons only modules:
 
-| Variant        | Environments           | Tree Shake | Package path                                                                                     |
-| -------------- | ---------------------- | ---------- | ------------------------------------------------------------------------------------------------ |
-| **ESM bundle** | webpack 2+ / rollup.js | Yes        | `dist/custom-bootstrap-vue-icons.esm.js`                                                         |
-| commonjs2      | webpack 1 / ...        | No         | `dist/custom-bootstrap-vue-icons.common.js` _or_ `dist/custom-bootstrap-vue-icons.common.min.js` |
-| UMD            | Browser                | No         | `dist/custom-bootstrap-vue-icons.js` _or_ `dist/custom-bootstrap-vue-icons.min.js`               |
+| Variant        | Environments           | Tree Shake | Package path                                                                       |
+| -------------- | ---------------------- | ---------- | ---------------------------------------------------------------------------------- |
+| **ESM bundle** | webpack 2+ / rollup.js | Yes        | `dist/bootstrap-vue-icons.esm.js`                                                  |
+| commonjs2      | webpack 1 / ...        | No         | `dist/bootstrap-vue-icons.common.js` _or_ `dist/bootstrap-vue-icons.common.min.js` |
+| UMD            | Browser                | No         | `dist/bootstrap-vue-icons.js` _or_ `dist/bootstrap-vue-icons.min.js`               |
 
 The `ESM` module build and the `ESM` bundles (single file) are
 [tree-shakeable](#tree-shaking-with-module-bundlers), but you will experience smaller final bundle
 sizes when using the `ESM` module _vs._ the `ESM` bundle.
 
 All of the build variants listed above have been pre-transpiled targeting the
-[browsers](https://github.com/custom-bootstrap-vue/custom-bootstrap-vue/blob/master/.browserslistrc)
-supported by BootstrapVue. However, if you are targeting only modern browsers, you may want to
-import `BootstrapVue` from `src/index.js`, (by aliasing `bootstrap-vue` to
-`bootstrap-vue/src/index.js`) and whitelisting `bootstrap-vue/src` for transpilation via your own
-project. This can potentially reduce final project bundle sizes. See the
+[browsers](https://github.com/bootstrap-vue/bootstrap-vue/blob/master/.browserslistrc) supported by
+BootstrapVue. However, if you are targeting only modern browsers, you may want to import
+`BootstrapVue` from `src/index.js`, (by aliasing `bootstrap-vue` to `bootstrap-vue/src/index.js`)
+and whitelisting `bootstrap-vue/src` for transpilation via your own project. This can potentially
+reduce final project bundle sizes. See the
 [Using BootstrapVue source code for smaller bundles](#using-bootstrapvue-source-code-for-smaller-bundles)
 section above for more details.
 
@@ -792,7 +791,7 @@ import 'core-js/stable'
 import 'regenerator-runtime/runtime'
 import 'intersection-observer' // Optional
 import Vue from 'vue'
-import BootstrapVue from 'custom-bootstrap-vue'
+import BootstrapVue from 'bootstrap-vue'
 ```
 
 If using deprecated [@babel/polyfill](https://babeljs.io/docs/en/babel-polyfill/):
@@ -809,7 +808,7 @@ Then import the polyfills in your app main entry point:
 import '@babel/polyfill'
 import 'intersection-observer' // Optional
 import Vue from 'vue'
-import BootstrapVue from 'custom-bootstrap-vue'
+import BootstrapVue from 'bootstrap-vue'
 ```
 
 Alternatively, use [Polyfill.io](https://polyfill.io/) to dynamically serve browser specific

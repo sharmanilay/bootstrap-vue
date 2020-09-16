@@ -5,15 +5,14 @@
 ## Playground & Issue reports
 
 If you want to play with BootstrapVue components without any local setup just head to our
-[Online Playground](https://custom-bootstrap-vue.org/play) and you can interactively play and test
+[Online Playground](https://bootstrap-vue.org/play) and you can interactively play and test
 components with a fresh Vue instance. If you want to keep your changes or make PRs reporting a
 component's misbehaviour you can save them to _CodePen_, _CodeSandbox_ or _JSFiddle_ and provide
 that link in issues.
 
 ## Setup
 
-- Clone this repo
-  (`git clone https://github.com/custom-bootstrap-vue/custom-bootstrap-vue --branch=dev`)
+- Clone this repo (`git clone https://github.com/bootstrap-vue/bootstrap-vue --branch=dev`)
 - Make sure you have `node` & `yarn` installed locally
 - `cd bootstrap-vue`
 - Run `yarn install` to get all dependencies installed
@@ -52,18 +51,17 @@ Examples:
 ## Financial contributions
 
 We also welcome financial contributions in full transparency on our
-[Open Collective](https://opencollective.com/custom-bootstrap-vue). Anyone can file an expense. If
-the expense makes sense for the development of the community, it will be "merged" in the ledger of
-our open collective by the core contributors and the person who filed the expense will be
-reimbursed.
+[Open Collective](https://opencollective.com/bootstrap-vue). Anyone can file an expense. If the
+expense makes sense for the development of the community, it will be "merged" in the ledger of our
+open collective by the core contributors and the person who filed the expense will be reimbursed.
 
 Consider asking your company to also support this open source project by
-[becoming a sponsor](https://opencollective.com/custom-bootstrap-vue/contribute/).
+[becoming a sponsor](https://opencollective.com/bootstrap-vue/contribute/).
 
 ## Contributors
 
 Thank you to all the people who have already contributed to BootstrapVue!
 
 <div class="p-3 mb-3text-center">
-  <a href="https://github.com/custom-bootstrap-vue/custom-bootstrap-vue/graphs/contributors" rel="noopener" class="d-inline-block"><img src="https://opencollective.com/custom-bootstrap-vue/contributors.svg?width=890" class="img-fluid"></a>
+  <a href="https://github.com/bootstrap-vue/bootstrap-vue/graphs/contributors" rel="noopener" class="d-inline-block"><img src="https://opencollective.com/bootstrap-vue/contributors.svg?width=890" class="img-fluid"></a>
 </div>

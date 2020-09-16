@@ -358,7 +358,7 @@ export default {
       // relates to the toggle click
       // The 'click' event will still be fired and we handle closing
       // other dropdowns there too
-      // See https://github.com/custom-bootstrap-vue/custom-bootstrap-vue/issues/4328
+      // See https://github.com/bootstrap-vue/bootstrap-vue/issues/4328
       stopEvent(evt, { propagation: false })
     },
     // Called from dropdown menu context

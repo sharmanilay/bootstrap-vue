@@ -303,7 +303,7 @@ export default {
       // TODO: Make this visual limit configurable based on breakpoint(s)
       if (pages.length > 3) {
         const idx = currentPage - startNumber
-        // THe following is a custom-bootstrap-vue custom utility class
+        // THe following is a bootstrap-vue custom utility class
         const classes = 'bv-d-xs-down-none'
         if (idx === 0) {
           // Keep leftmost 3 buttons visible when current page is first page

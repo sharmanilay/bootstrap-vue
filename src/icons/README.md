@@ -63,7 +63,7 @@ i.e icon `'alert-circle-fill'` is exported as `BIconAlertCircleFill`, icon `'x'`
 
 ```js
 import Vue from 'vue'
-import { BootstrapVue, BootstrapVueIcons } from 'custom-bootstrap-vue'
+import { BootstrapVue, BootstrapVueIcons } from 'bootstrap-vue'
 
 Vue.use(BootstrapVue)
 Vue.use(BootstrapVueIcons)
@@ -73,7 +73,7 @@ Or
 
 ```js
 import Vue from 'vue'
-import { BootstrapVue, IconsPlugin } from 'custom-bootstrap-vue'
+import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 
 Vue.use(BootstrapVue)
 Vue.use(IconsPlugin)
@@ -85,7 +85,7 @@ Making them globally available:
 
 ```js
 import Vue from 'vue'
-import { BootstrapVue, BIcon, BIconArrowUp, BIconArrowDown } from 'custom-bootstrap-vue'
+import { BootstrapVue, BIcon, BIconArrowUp, BIconArrowDown } from 'bootstrap-vue'
 
 Vue.use(BootstrapVue)
 Vue.component('BIcon', BIcon)
@@ -96,7 +96,7 @@ Vue.component('BIconArrowDown', BIconArrowDown)
 Or if using in specific pages or components:
 
 ```js
-import { BIcon, BIconArrowUp, BIconArrowDown } from 'custom-bootstrap-vue'
+import { BIcon, BIconArrowUp, BIconArrowDown } from 'bootstrap-vue'
 
 export default {
   components: {
@@ -115,8 +115,8 @@ If you are using _only_ `BootstrapVueIcons` or `IconsPlugin` in your project, yo
 import the required icons CSS, rather than the full Bootstrap and BootstrapVue SCSS/CSS.
 
 ```js
-import { BootstrapVueIcons } from 'custom-bootstrap-vue'
-import 'custom-bootstrap-vue/dist/custom-bootstrap-vue-icons.min.css'
+import { BootstrapVueIcons } from 'bootstrap-vue'
+import 'bootstrap-vue/dist/bootstrap-vue-icons.min.css'
 
 Vue.use(BootstrapVueIcons)
 ```
@@ -124,8 +124,8 @@ Vue.use(BootstrapVueIcons)
 Or if using the icons SCSS source:
 
 ```js
-import { BootstrapVueIcons } from 'custom-bootstrap-vue'
-import 'custom-bootstrap-vue/src/icons.scss'
+import { BootstrapVueIcons } from 'bootstrap-vue'
+import 'bootstrap-vue/src/icons.scss'
 
 Vue.use(BootstrapVueIcons)
 ```
@@ -143,11 +143,11 @@ icons library:
 ```html
 <head>
   <link type="text/css" rel="stylesheet" href="//unpkg.com/bootstrap/dist/css/bootstrap.min.css" />
-  <link type="text/css" rel="stylesheet" href="//unpkg.com/custom-bootstrap-vue@latest/dist/custom-bootstrap-vue.min.css" />
+  <link type="text/css" rel="stylesheet" href="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.css" />
   <!-- Load Vue followed by BootstrapVue, and BootstrapVueIcons -->
   <script src="//unpkg.com/vue@latest/dist/vue.min.js"></script>
-  <script src="//unpkg.com/custom-bootstrap-vue@latest/dist/custom-bootstrap-vue.min.js"></script>
-  <script src="//unpkg.com/custom-bootstrap-vue@latest/dist/custom-bootstrap-vue-icons.min.js"></script>
+  <script src="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.js"></script>
+  <script src="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue-icons.min.js"></script>
 </head>
 ```
 
@@ -156,10 +156,10 @@ If using just the icons:
 ```html
 <head>
   <link type="text/css" rel="stylesheet" href="//unpkg.com/bootstrap/dist/css/bootstrap.min.css" />
-  <link type="text/css" rel="stylesheet" href="//unpkg.com/custom-bootstrap-vue@latest/dist/custom-bootstrap-vue-icons.min.css" />
+  <link type="text/css" rel="stylesheet" href="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue-icons.min.css" />
   <!-- Load Vue followed by BootstrapVueIcons -->
   <script src="//unpkg.com/vue@latest/dist/vue.min.js"></script>
-  <script src="//unpkg.com/custom-bootstrap-vue@latest/dist/custom-bootstrap-vue-icons.min.js"></script>
+  <script src="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue-icons.min.js"></script>
 </head>
 ```
 

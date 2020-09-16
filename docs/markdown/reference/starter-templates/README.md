@@ -31,7 +31,7 @@ tags to load the required JavaScript and CSS in your page.
     <link
       type="text/css"
       rel="stylesheet"
-      href="https://unpkg.com/custom-bootstrap-vue@latest/dist/custom-bootstrap-vue.css"
+      href="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.css"
     />
 
     <!-- Load polyfills to support older browsers -->
@@ -39,7 +39,7 @@ tags to load the required JavaScript and CSS in your page.
 
     <!-- Required scripts -->
     <script src="https://unpkg.com/vue@latest/dist/vue.js"></script>
-    <script src="https://unpkg.com/custom-bootstrap-vue@latest/dist/custom-bootstrap-vue.js"></script>
+    <script src="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.js"></script>
   </head>
   <body>
     <!-- Our application root element -->
@@ -47,7 +47,7 @@ tags to load the required JavaScript and CSS in your page.
       <b-container>
         <b-jumbotron header="BootstrapVue" lead="Bootstrap v4 Components for Vue.js 2">
           <p>For more information visit our website</p>
-          <b-btn variant="primary" href="https://custom-bootstrap-vue.org/">More Info</b-btn>
+          <b-btn variant="primary" href="https://bootstrap-vue.org/">More Info</b-btn>
         </b-jumbotron>
 
         <b-form-group
@@ -116,7 +116,7 @@ follows:
 
 ```js
 // Import the individual components
-import { BCard, BCardBody, BCardFooter, BCardHeader, BCardImg, BTable } from 'custom-bootstrap-vue'
+import { BCard, BCardBody, BCardFooter, BCardHeader, BCardImg, BTable } from 'bootstrap-vue'
 
 // Add components globally
 Vue.component('b-card', BCard)
@@ -148,7 +148,7 @@ done with:
 
 ```js
 // Import the components as Vue plugins
-import { CardPlugin, TablePlugin } from 'custom-bootstrap-vue'
+import { CardPlugin, TablePlugin } from 'bootstrap-vue'
 
 // Add the plugins to Vue
 Vue.use(CardPlugin)

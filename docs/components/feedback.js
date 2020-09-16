@@ -3,7 +3,7 @@ export default {
   name: 'BVFeedback',
   data() {
     return {
-      baseUrl: 'https://github.com/custom-bootstrap-vue/custom-bootstrap-vue'
+      baseUrl: 'https://github.com/bootstrap-vue/bootstrap-vue'
     }
   },
   computed: {
