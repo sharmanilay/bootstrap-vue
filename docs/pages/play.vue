@@ -480,11 +480,11 @@ export default {
       const htmlContent = '<div id="app"></div>'
       const jsContent = [
         "import Vue from 'vue'",
-        "import { BootstrapVue, BootstrapVueIcons } from 'bootstrap-vue'",
+        "import { BootstrapVue, BootstrapVueIcons } from 'custom-bootstrap-vue'",
         "import App from './App'",
         '',
         "import 'bootstrap/dist/css/bootstrap.css'",
-        "import 'bootstrap-vue/dist/bootstrap-vue.css'",
+        "import 'custom-bootstrap-vue/dist/custom-bootstrap-vue.css'",
         '',
         'Vue.use(BootstrapVue)',
         'Vue.use(BootstrapVueIcons)',
@@ -497,7 +497,7 @@ export default {
       }
       const dependencies = {
         bootstrap: bootstrapVersion,
-        'bootstrap-vue': bootstrapVueVersion,
+        'custom-bootstrap-vue': bootstrapVueVersion,
         vue: vueVersion
       }
       const devDependencies = {

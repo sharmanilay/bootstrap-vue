@@ -6,7 +6,7 @@ const RX_UN_KEBAB = /-(\w)/g
 const RX_HYPHENATE = /\B([A-Z])/g
 
 // Path to index file when using bootstrap-vue source code
-const srcIndex = 'bootstrap-vue/src/index.js'
+const srcIndex = 'custom-bootstrap-vue/src/index.js'
 
 // --- Utility methods ---
 
@@ -51,7 +51,7 @@ module.exports = function nuxtBootstrapVue(moduleOptions = {}) {
     )
     if (bootstrapVueCSS) {
       // Add BootstrapVue CSS
-      this.options.css.unshift('bootstrap-vue/dist/bootstrap-vue.css')
+      this.options.css.unshift('custom-bootstrap-vue/dist/custom-bootstrap-vue.css')
     }
 
     const bootstrapCSS = pickFirst(
@@ -92,7 +92,7 @@ module.exports = function nuxtBootstrapVue(moduleOptions = {}) {
     const usePretranspiled = pickFirst(options.usePretranspiled, this.options.dev, false)
     if (!usePretranspiled) {
       // Use bootstrap-vue source code for smaller prod builds
-      // by aliasing 'bootstrap-vue' to the source files
+      // by aliasing 'custom-bootstrap-vue' to the source files
       this.extendBuild(config => {
         if (!config.resolve.alias) {
           config.resolve.alias = {}
@@ -100,12 +100,12 @@ module.exports = function nuxtBootstrapVue(moduleOptions = {}) {
         const index = require.resolve(srcIndex)
         const srcDir = index.replace(/index\.js$/, '')
         // We prepend a $ to ensure that it is only used for
-        // `import from 'bootstrap-vue'` not `import from 'bootstrap-vue/*'`
-        config.resolve.alias['bootstrap-vue$'] = index
+        // `import from 'custom-bootstrap-vue'` not `import from 'custom-bootstrap-vue/*'`
+        config.resolve.alias['custom-bootstrap-vue$'] = index
         // If users are still cherry-picking modules from esm/ or es/ (legacy),
         // alias them to src/ to prevent duplicate code imports
-        config.resolve.alias['bootstrap-vue/esm/'] = srcDir
-        config.resolve.alias['bootstrap-vue/es/'] = srcDir
+        config.resolve.alias['custom-bootstrap-vue/esm/'] = srcDir
+        config.resolve.alias['custom-bootstrap-vue/es/'] = srcDir
       })
     }
 
@@ -176,7 +176,7 @@ module.exports = function nuxtBootstrapVue(moduleOptions = {}) {
     // Register plugin, passing options to plugin template
     this.addPlugin({
       src: resolve(__dirname, 'plugin.template.js'),
-      fileName: 'bootstrap-vue.js',
+      fileName: 'custom-bootstrap-vue.js',
       options: templateOptions
     })
   })

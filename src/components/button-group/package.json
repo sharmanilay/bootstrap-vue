@@ -1,5 +1,5 @@
 {
-  "name": "@bootstrap-vue/button-group",
+  "name": "@custom-bootstrap-vue/button-group",
   "version": "1.0.0",
   "meta": {
     "title": "Button Group",
