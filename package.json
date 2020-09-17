@@ -1,6 +1,6 @@
 {
   "name": "custom-bootstrap-vue",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Custom version of bootstrap-vue created for providing specific theme to a particular project",
   "main": "dist/custom-bootstrap-vue.common.js",
   "web": "dist/custom-bootstrap-vue.js",
