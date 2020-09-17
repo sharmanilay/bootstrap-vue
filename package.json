@@ -1,6 +1,6 @@
 {
   "name": "custom-bootstrap-vue",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Custom version of bootstrap-vue created for providing specific theme to a particular project",
   "main": "dist/bootstrap-vue.common.js",
   "web": "dist/bootstrap-vue.js",
@@ -8,6 +8,7 @@
   "jsnext:main": "esm/index.js",
   "source": "src/index.js",
   "sass": "src/index.scss",
+  "homepage": "https://github.com/sharmanilay/bootstrap-vue",
   "style": "dist/bootstrap-vue.css",
   "types": "src/index.d.ts",
   "web-types": "dist/web-types.json",
